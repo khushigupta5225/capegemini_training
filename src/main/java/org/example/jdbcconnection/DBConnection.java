@@ -15,7 +15,7 @@ public class DBConnection {
                 if (connection == null) {
 
                     try {
-                        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/cg", "root", "khushi");
+                        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/cg", "root", System.getenv("DB_PASSWORD"));
                         System.out.println("Connected to database successfully");
                     } catch (SQLException e) {
                         e.printStackTrace();
